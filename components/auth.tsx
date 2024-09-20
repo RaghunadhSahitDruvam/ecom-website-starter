@@ -18,18 +18,6 @@ import { User } from "lucide-react";
 
 export default function SignInUpPopup() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  async function onSubmit() {
-    setIsLoading(true);
-
-    // Here you would typically send the form data to your backend
-    // This is just a mock implementation
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    setIsLoading(false);
-    setIsOpen(false);
-  }
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -75,8 +63,8 @@ export default function SignInUpPopup() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button type="submit" className="w-full" disabled={isLoading}>
-                    {isLoading ? "Logging in..." : "Login"}
+                  <Button type="submit" className="w-full">
+                    Login
                   </Button>
                 </CardFooter>
               </form>
@@ -120,8 +108,8 @@ export default function SignInUpPopup() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button type="submit" className="w-full" disabled={isLoading}>
-                    {isLoading ? "Signing up..." : "Sign Up"}
+                  <Button type="submit" className="w-full">
+                    Sign Up
                   </Button>
                 </CardFooter>
               </form>
