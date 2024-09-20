@@ -12,7 +12,7 @@ import { PiHighlighterCircleBold } from "react-icons/pi";
 import { MdFace4 } from "react-icons/md";
 import Link from "next/link";
 import CartDrawer from "./CartDrawer";
-import SignInUpPopup from "./signin";
+import SignInUpPopup from "./auth";
 
 export default function Navbar() {
   const navItems = [
