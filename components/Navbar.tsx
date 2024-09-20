@@ -12,6 +12,7 @@ import { PiHighlighterCircleBold } from "react-icons/pi";
 import { MdFace4 } from "react-icons/md";
 import Link from "next/link";
 import CartDrawer from "./CartDrawer";
+import SignInUpPopup from "./signin";
 
 export default function Navbar() {
   const navItems = [
@@ -113,9 +114,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center justify-end lg:w-1/3">
-            <Button variant="ghost" size="icon" className="hidden lg:flex">
-              <User size={24} />
-            </Button>
+            <SignInUpPopup />
             <CartDrawer />
           </div>
         </div>

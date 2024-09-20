@@ -21,7 +21,7 @@ export default function OrderPage() {
             {/* Order Details Section */}
             <div className="mb-6 border rounded-lg overflow-hidden">
               <div className="flex flex-wrap">
-                <div className="w-full sm:w-1/2 md:w-1/4 p-4 border-b sm:border-b-0 sm:border-r">
+                <div className="w-full sm:w-1/2 md:w-1/5 p-4 border-b sm:border-b-0 sm:border-r">
                   <div className="font-semibold text-sm mb-1">
                     ORDER NUMBER:
                   </div>
