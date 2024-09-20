@@ -20,7 +20,7 @@ export default function SignInUpPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  async function onSubmit(type: "login" | "signup", formData: FormData) {
+  async function onSubmit() {
     setIsLoading(true);
 
     // Here you would typically send the form data to your backend
@@ -46,7 +46,7 @@ export default function SignInUpPopup() {
               <TabsTrigger value="signup">Sign Up</TabsTrigger>
             </TabsList>
             <TabsContent value="login">
-              <form action={(formData) => onSubmit("login", formData)}>
+              <form>
                 <CardHeader>
                   <CardTitle>Login</CardTitle>
                   <CardDescription>
@@ -82,7 +82,7 @@ export default function SignInUpPopup() {
               </form>
             </TabsContent>
             <TabsContent value="signup">
-              <form action={(formData) => onSubmit("signup", formData)}>
+              <form>
                 <CardHeader>
                   <CardTitle>Sign Up</CardTitle>
                   <CardDescription>
