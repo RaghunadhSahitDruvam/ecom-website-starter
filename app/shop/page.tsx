@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Star, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import ProductCard from "@/components/home/productCard";
 import FilterComponent from "@/components/shop/filterButton";
 
@@ -15,53 +15,6 @@ interface Product {
   discount: number;
   tag: string;
 }
-
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Luxury Perfume Gift Set For Men",
-    image: "/placeholder.svg?height=300&width=300",
-    price: 523.0,
-    originalPrice: 859.0,
-    rating: 4.7,
-    reviews: 1221,
-    discount: 39,
-    tag: "BESTSELLER",
-  },
-  {
-    id: 2,
-    name: "CEO Man Luxury Perfume - 100ml",
-    image: "/placeholder.svg?height=300&width=300",
-    price: 475.0,
-    originalPrice: 899.0,
-    rating: 4.8,
-    reviews: 737,
-    discount: 48,
-    tag: "BESTSELLER",
-  },
-  {
-    id: 3,
-    name: "Luxury Unisex Perfume Gift Set",
-    image: "/placeholder.svg?height=300&width=300",
-    price: 523.0,
-    originalPrice: 859.0,
-    rating: 4.7,
-    reviews: 1408,
-    discount: 39,
-    tag: "BESTSELLER",
-  },
-  {
-    id: 4,
-    name: "WHITE Oud Unisex - 100ml",
-    image: "/placeholder.svg?height=300&width=300",
-    price: 549.0,
-    originalPrice: 899.0,
-    rating: 4.8,
-    reviews: 856,
-    discount: 46,
-    tag: "BESTSELLER",
-  },
-];
 
 export default function ShopComponent() {
   const [sortBy, setSortBy] = useState("Featured");

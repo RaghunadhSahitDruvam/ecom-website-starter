@@ -8,8 +8,6 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { XCircle } from "lucide-react";
-import Image from "next/image";
-
 const orders = [
   {
     id: "66ed5ec9d316594990e71a19",

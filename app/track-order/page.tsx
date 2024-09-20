@@ -6,8 +6,15 @@ import { SearchIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+// Define the OrderDetails type
+type OrderDetails = {
+  orderId: string;
+  status: string;
+  estimatedDelivery: string;
+};
+
 // Mock function to simulate order lookup
-const lookupOrder = (orderId: string) => {
+const lookupOrder = (orderId: string): Promise<OrderDetails | null> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       if (orderId === "12345") {
@@ -24,10 +31,10 @@ const lookupOrder = (orderId: string) => {
 };
 
 export default function OrderTracker() {
-  const [orderId, setOrderId] = useState("");
-  const [orderDetails, setOrderDetails] = useState<any>(null);
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [orderId, setOrderId] = useState<string>(""); // State type defined
+  const [orderDetails, setOrderDetails] = useState<OrderDetails | null>(null); // Typed state for orderDetails
+  const [error, setError] = useState<string>(""); // State type defined
+  const [isLoading, setIsLoading] = useState<boolean>(false); // State type defined
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
