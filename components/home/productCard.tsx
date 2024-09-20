@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface Product {
   id: string;
@@ -70,13 +71,15 @@ function Card({ product }: { product: Product }) {
   return (
     <div className=" w-[66vw] sm:w-full flex-shrink-0 mb-2">
       <div className="relative">
-        <img
-          alt={product.name}
-          className="w-full h-auto object-cover mb-4 "
-          height="316"
-          src={product.image}
-          width="252"
-        />
+        <Link href={"/product"}>
+          <img
+            alt={product.name}
+            className="w-full h-auto object-cover mb-4 "
+            height="316"
+            src={product.image}
+            width="252"
+          />
+        </Link>
         <div className="absolute top-2 left-2 flex gap-2">
           {product.isBestseller && (
             <span className="bg-[#E1B87F] text-white text-xs font-semibold px-2 py-1 rounded">
@@ -118,9 +121,11 @@ function Card({ product }: { product: Product }) {
           ₹{product.originalPrice.toFixed(2)}
         </span>
       </div>
-      <Button className="w-full bg-black text-white hover:bg-gray-800">
-        {product.isSale ? "VIEW PRODUCT" : "ADD TO CART"}
-      </Button>
+      <Link href={"/product"}>
+        <Button className="w-full bg-black text-white hover:bg-gray-800">
+          VIEW PRODUCT
+        </Button>
+      </Link>
     </div>
   );
 }

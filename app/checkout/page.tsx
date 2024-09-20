@@ -11,6 +11,7 @@ import {
   TicketIcon,
   CreditCardIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 type Step = {
   title: string;
@@ -201,9 +202,11 @@ export default function CheckoutPage() {
                       <Label htmlFor="razorpay">Razorpay</Label>
                     </div>
                   </RadioGroup>
-                  <Button className="w-full" onClick={handleNext}>
-                    Confirm Payment Method
-                  </Button>
+                  <Link href={"/order"}>
+                    <Button className="w-full" onClick={handleNext}>
+                      Confirm Payment Method
+                    </Button>
+                  </Link>
                 </div>
               )}
             </CardContent>
@@ -261,9 +264,11 @@ export default function CheckoutPage() {
                     <span>₹ {total.toFixed(2)}</span>
                   </div>
                 </div>
-                <Button className="w-full bg-gray-200 text-gray-800 hover:bg-gray-300">
-                  Place Order with COD
-                </Button>
+                <Link href={"/order"}>
+                  <Button className="w-full bg-gray-200 text-gray-800 hover:bg-gray-300">
+                    Place Order with COD
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>

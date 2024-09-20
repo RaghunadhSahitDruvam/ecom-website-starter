@@ -106,7 +106,10 @@ export default function Navbar() {
           </div>
 
           <div className="flex-1 flex items-center justify-center lg:w-1/3">
-            <h1 className="text-2xl font-bold">VIBECART</h1>
+            <Link href={"/"}>
+              {" "}
+              <h1 className="text-2xl font-bold">VIBECART</h1>
+            </Link>
           </div>
 
           <div className="flex items-center justify-end lg:w-1/3">

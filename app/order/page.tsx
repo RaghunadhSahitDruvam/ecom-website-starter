@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function OrderPage() {
   return (
@@ -145,8 +146,9 @@ export default function OrderPage() {
                     </div>
                   </div>
                 </div>
-
-                <Button className="w-full mt-3">CONTINUE SHOPPING</Button>
+                <Link href={"/"}>
+                  <Button className="w-full mt-3">CONTINUE SHOPPING</Button>
+                </Link>
               </div>
             </div>
           </div>

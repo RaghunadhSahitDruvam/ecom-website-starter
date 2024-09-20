@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { X, Minus, Plus } from "lucide-react";
+import Link from "next/link";
 
 const CartDrawer = () => {
   interface CartItem {
@@ -132,9 +133,11 @@ const CartDrawer = () => {
             <p className="text-sm text-gray-500">
               Tax included. Shipping calculated at checkout.
             </p>
-            <Button className="w-full mt-4 bg-black text-white hover:bg-gray-800">
-              CHECK OUT — ₹{total.toFixed(2)}
-            </Button>
+            <Link href={"/checkout"}>
+              <Button className="w-full mt-4 bg-black text-white hover:bg-gray-800">
+                CHECK OUT — ₹{total.toFixed(2)}
+              </Button>
+            </Link>
           </div>
         </SheetContent>
       </Sheet>
