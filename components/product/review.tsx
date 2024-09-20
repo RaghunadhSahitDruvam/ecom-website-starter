@@ -35,10 +35,10 @@ export default function ReviewComponent() {
     },
   });
 
-  const handleSubmit = (values: any) => {
-    console.log("Review Submitted", values);
-    // Add logic to handle the submitted review
-  };
+  // const handleSubmit = (values: any) => {
+  //   console.log("Review Submitted", values);
+  //   // Add logic to handle the submitted review
+  // };
   const reviewData = {
     averageRating: 4.5,
     totalReviews: 1221,
@@ -117,7 +117,9 @@ export default function ReviewComponent() {
                   <h2>Submit Your Review</h2>
                 </DialogHeader>
 
-                <form onSubmit={form.onSubmit(handleSubmit)}>
+                <form
+                // onSubmit={form.onSubmit(handleSubmit)}
+                >
                   {/* Rating Select */}
                   <div style={{ marginBottom: "1rem" }}>
                     <Select

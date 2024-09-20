@@ -1,15 +1,6 @@
 import React from "react";
 
-import {
-  Search,
-  User,
-  ShoppingBag,
-  Menu,
-  Package,
-  Truck,
-  ChevronRight,
-} from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Search, User, Menu, Package, Truck, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { RiDiscountPercentFill } from "react-icons/ri";

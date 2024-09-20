@@ -3,7 +3,6 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
 import { CiInstagram } from "react-icons/ci";
 
 const reviews = [

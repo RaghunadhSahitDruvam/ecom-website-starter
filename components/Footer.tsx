@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { TbBrandPinterest } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
-import LinkComponent from "./Link";
 
 const Footer = () => {
   return (

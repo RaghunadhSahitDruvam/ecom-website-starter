@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const categories = [
   { name: "COSMETICS", image: "https://placehold.co/300x300" },
