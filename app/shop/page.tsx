@@ -4,18 +4,6 @@ import { ChevronDown } from "lucide-react";
 import ProductCard from "@/components/home/productCard";
 import FilterComponent from "@/components/shop/filterButton";
 
-interface Product {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-  originalPrice: number;
-  rating: number;
-  reviews: number;
-  discount: number;
-  tag: string;
-}
-
 export default function ShopComponent() {
   const [sortBy, setSortBy] = useState("Featured");
 
