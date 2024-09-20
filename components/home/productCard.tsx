@@ -125,14 +125,24 @@ function Card({ product }: { product: Product }) {
   );
 }
 
-export default function ProductCard({ heading }: { heading: string }) {
+export default function ProductCard({
+  heading,
+  shop,
+}: {
+  heading: string;
+  shop?: boolean;
+}) {
   return (
-    <div className="container mx-auto px-4 mb-[20px]">
-      <div className="flex justify-center">
-        <div className="heading  ownContainer uppercase sm:my-[40px]">
-          {heading}
+    <div className={`container mx-auto px-4 mb-[20px]`}>
+      {shop ? (
+        <></>
+      ) : (
+        <div className="flex justify-center">
+          <div className="heading  ownContainer uppercase sm:my-[40px]">
+            {heading}
+          </div>
         </div>
-      </div>
+      )}
       <div className="relative">
         <div className="flex overflow-x-auto gap-4 sm:gap-6 mb-8 scroll-smooth no-scrollbar sm:grid sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
@@ -140,14 +150,16 @@ export default function ProductCard({ heading }: { heading: string }) {
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-8">
-        <Button
-          variant="outline"
-          className="w-[90%] sm:w-[347px] border-2 border-black textGap px-[10px] py-[20px]"
-        >
-          VIEW ALL
-        </Button>
-      </div>
+      {!shop && (
+        <div className="flex justify-center mt-8">
+          <Button
+            variant="outline"
+            className="w-[90%] sm:w-[347px] border-2 border-black textGap px-[10px] py-[20px]"
+          >
+            VIEW ALL
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
