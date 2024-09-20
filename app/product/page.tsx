@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import Marquee from "react-fast-marquee";
 
-export const ProductPage = () => {
+const ProductPage = () => {
   const images = [
     "https://placehold.co/500x500",
     "https://placehold.co/500x500?text=Second+Image",
