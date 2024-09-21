@@ -11,8 +11,17 @@ import {
 } from "@/components/ui/sheet";
 import { X, Minus, Plus } from "lucide-react";
 import Link from "next/link";
+import { useAtom, useStore } from "jotai";
+import { cartMenuState } from "./store";
 
 const CartDrawer = () => {
+  const [cartMenuOpen, setCartMenuOpen] = useAtom(cartMenuState, {
+    store: useStore(),
+  });
+
+  const handleOnClickCartMenu = () => {
+    setCartMenuOpen(true);
+  };
   interface CartItem {
     id: string;
     name: string;
@@ -57,9 +66,14 @@ const CartDrawer = () => {
 
   return (
     <div className="relative">
-      <Sheet>
+      <Sheet open={cartMenuOpen}>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="relative">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="relative"
+            onClick={() => handleOnClickCartMenu()}
+          >
             <ShoppingBag size={24} />
             <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-black rounded-full">
               {cartItems.length}

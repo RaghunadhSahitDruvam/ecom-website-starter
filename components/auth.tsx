@@ -13,20 +13,38 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { User } from "lucide-react";
+import { useAtom, useStore } from "jotai";
+import { accountMenuState } from "./store";
 
 export default function SignInUpPopup() {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [accountMenuOpen, setAccountMenuOpen] = useAtom(accountMenuState, {
+    store: useStore(),
+  });
+  const handleOnClickAccountMenu = () => {
+    setAccountMenuOpen(true);
+    console.log("Menu opened: ", accountMenuOpen); // Debug log
+  };
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={accountMenuOpen}>
       <DialogTrigger asChild>
-        <Button variant="ghost" size="icon" className="lg:flex">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="lg:flex"
+          onClick={() => handleOnClickAccountMenu()}
+        >
           <User size={24} />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
+        <DialogTitle className="heading text-center">Login/Signup</DialogTitle>
         <Card>
           <Tabs defaultValue="login">
             <TabsList className="grid w-full grid-cols-2">

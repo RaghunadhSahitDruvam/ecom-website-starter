@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MantineProvider } from "@mantine/core";
+import MobileNavComponent from "@/components/MobileNav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <MantineProvider>
           <Navbar />
           {children}
+          <MobileNavComponent />
           <Footer />
         </MantineProvider>
       </body>

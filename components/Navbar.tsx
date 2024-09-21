@@ -1,5 +1,4 @@
-import React from "react";
-
+"use client";
 import { Search, User, Menu, Package, Truck, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -13,8 +12,18 @@ import { MdFace4 } from "react-icons/md";
 import Link from "next/link";
 import CartDrawer from "./CartDrawer";
 import SignInUpPopup from "./auth";
+import { useStore, useAtom } from "jotai";
+import { hamburgerMenuState } from "./store";
 
 export default function Navbar() {
+  const [hamMenuOpen, setHamMenuOpen] = useAtom(hamburgerMenuState, {
+    store: useStore(),
+  });
+
+  const handleOnClickHamurgerMenu = () => {
+    setHamMenuOpen(true);
+  };
+
   const navItems = [
     { name: "CRAZY DEALS", icon: <RiDiscountPercentFill size={24} /> },
     { name: "SHOP ALL", icon: <LuStore size={24} /> },
@@ -30,9 +39,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-15 ">
           <div className="flex items-center lg:w-1/3">
-            <Sheet>
+            <Sheet open={hamMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="lg:hidden mr-2">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="lg:hidden mr-2"
+                  onClick={() => handleOnClickHamurgerMenu()}
+                >
                   <Menu size={24} />
                 </Button>
               </SheetTrigger>
@@ -114,7 +128,10 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center justify-end lg:w-1/3">
-            <SignInUpPopup />
+            <div className="">
+              {" "}
+              <SignInUpPopup />
+            </div>
             <CartDrawer />
           </div>
         </div>
