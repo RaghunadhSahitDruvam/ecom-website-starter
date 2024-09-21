@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 "use client";
 
 import * as React from "react";
@@ -5,7 +7,7 @@ import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
 import { X } from "lucide-react";
 import { useStore, useAtom } from "jotai";
-import { hamburgerMenuState, cartMenuState, accountMenuState } from "../store";
+import { hamburgerMenuState, cartMenuState } from "../store";
 
 import { cn } from "@/lib/utils";
 

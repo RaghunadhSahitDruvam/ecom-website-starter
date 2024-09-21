@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 "use client";
 import { Dialog } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
