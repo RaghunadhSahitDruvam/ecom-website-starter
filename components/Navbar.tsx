@@ -14,12 +14,14 @@ import CartDrawer from "./CartDrawer";
 import SignInUpPopup from "./auth";
 import { useStore, useAtom } from "jotai";
 import { hamburgerMenuState } from "./store";
+import { useState } from "react";
+import SearchModal from "./searchModal";
 
 export default function Navbar() {
   const [hamMenuOpen, setHamMenuOpen] = useAtom(hamburgerMenuState, {
     store: useStore(),
   });
-
+  const [open, setOpen] = useState<boolean>(false);
   const handleOnClickHamurgerMenu = () => {
     setHamMenuOpen(true);
   };
@@ -115,8 +117,10 @@ export default function Navbar() {
                   type="search"
                   placeholder="Search"
                   className="pl-10 pr-4 py-2 w-full border-b-2 border-black"
+                  onClick={() => setOpen(true)}
                 />
               </div>
+              {open && <SearchModal open={open} setOpen={setOpen} />}
             </div>
           </div>
 
@@ -147,8 +151,10 @@ export default function Navbar() {
               type="search"
               placeholder="Search for your favourite products"
               className="pl-10 pr-4 py-1 w-full border-b-2 border-black mb-2"
+              onClick={() => setOpen(true)}
             />
           </div>
+          {open && <SearchModal open={open} setOpen={setOpen} />}
         </div>
       </div>
 
