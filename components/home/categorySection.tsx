@@ -5,7 +5,7 @@ const categories = [
   { name: "SKINCARE", image: "https://placehold.co/300x300" },
   { name: "LUXURY PERFUMES", image: "https://placehold.co/300x300" },
   { name: "BATH & BODY", image: "https://placehold.co/300x300" },
-  { name: "BODY DEOS", image: "https://placehold.co/300x300" },
+  { name: "Skin Deodorants", image: "https://placehold.co/300x300" },
   { name: "GIFT SETS", image: "https://placehold.co/300x300" },
 ];
 const CategorySection = () => {

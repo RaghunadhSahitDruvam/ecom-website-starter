@@ -33,14 +33,14 @@ const CartDrawer = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([
     {
       id: "1",
-      name: "CEO Man Luxury Perfume - 100ml",
+      name: "High-End Fragrance Collection for Males",
       price: 1615,
       quantity: 4,
       image: "https://placehold.co/70x70",
     },
     {
       id: "2",
-      name: "OUD Unisex Luxury Perfume - 100ml",
+      name: "High-End Fragrance Collection for Males",
       price: 2300,
       quantity: 4,
       image: "https://placehold.co/70x70",

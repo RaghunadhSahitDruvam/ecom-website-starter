@@ -40,7 +40,7 @@ export default function ReviewComponent() {
   //   // Add logic to handle the submitted review
   // };
   const reviewData = {
-    averageRating: 4.5,
+    averageRating: 4.4,
     totalReviews: 1221,
     ratingBreakdown: [
       { stars: 5, percentage: 71, count: 864 },
@@ -182,7 +182,7 @@ export default function ReviewComponent() {
               </div>
               <div>
                 <div className="flex items-center">
-                  <span className="font-semibold mr-2">Sumit M.</span>
+                  <span className="font-semibold mr-2">Suraj M.</span>
                   <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">
                     Verified
                   </span>
@@ -199,18 +199,17 @@ export default function ReviewComponent() {
             </div>
             <p className="text-lg mb-2">Soo gorgeous 😍❤️</p>
             <p className="text-gray-600">
-              The best perfume of Bella Vita and your agent behaviour is best
-              talking to coustomer ❤️
+              The best perfume of VibeCart, Really AMAZING!!! ❤️
             </p>
           </div>
           <div className="border-t pt-4">
             <div className="flex items-center mb-2">
               <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-xl font-semibold mr-3">
-                S
+                R
               </div>
               <div>
                 <div className="flex items-center">
-                  <span className="font-semibold mr-2">Sumit M.</span>
+                  <span className="font-semibold mr-2">Rudra R.</span>
                   <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">
                     Verified
                   </span>
@@ -225,11 +224,8 @@ export default function ReviewComponent() {
                 </div>
               </div>
             </div>
-            <p className="text-lg mb-2">Soo gorgeous 😍❤️</p>
-            <p className="text-gray-600">
-              The best perfume of Bella Vita and your agent behaviour is best
-              talking to coustomer ❤️
-            </p>
+            <p className="text-lg mb-2">Good</p>
+            <p className="text-gray-600">Best Perfume I used ❤️</p>
           </div>
         </div>
       </div>

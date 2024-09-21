@@ -25,7 +25,7 @@ const SpecialCombosComponent = () => {
               className="w-full h-auto object-cover"
             />
             <p className="text-center uppercase textGa font-[500]">
-              Daily Essential Kit
+              Impeccable Matte Set of Three
             </p>
           </div>
           <div className="flex-shrink-0 w-[80vw] sm:w-[347px]">
@@ -35,7 +35,7 @@ const SpecialCombosComponent = () => {
               className="w-full h-auto object-cover"
             />
             <p className="text-center uppercase textGa font-[500]">
-              Daily Essential Kit
+              Fragrance Team Set
             </p>
           </div>
         </div>

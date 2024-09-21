@@ -7,24 +7,24 @@ export default function WhyWebsiteComponent() {
       icon: Rabbit,
       title: "CRUELTY FREE",
       description:
-        "Kindness in every bottle: Our commitment to cruelty-free Products.",
+        "Compassion in every drop: Our promise of ethical, cruelty-free products.",
     },
     {
       icon: Droplet,
       title: "FRAGRANCE FORWARD",
-      description: "Luxurious & imported perfume oils in every product",
+      description: "Opulent and imported fragrance oils in each creation.",
     },
     {
       icon: Wallet,
       title: "AFFORDABLE LUXURY",
       description:
-        "Offering Premium Quality and Elegance at a Reasonable Price",
+        "Delivering Exceptional Quality and Sophistication at an Affordable Price.",
     },
     {
       icon: Users,
       title: "GENDER NEUTRAL",
       description:
-        "Elevate your self-care routine with bath, body and personal care for all",
+        "Enhance your self-care ritual with bath, body, and personal care products for everyone.",
     },
   ];
 

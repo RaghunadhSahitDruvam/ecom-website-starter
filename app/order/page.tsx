@@ -15,8 +15,8 @@ export default function OrderPage() {
             </div>
 
             <div className="text-center mb-6">
-              <h1 className="text-2xl font-bold">THANK YOU SREERAM MV</h1>
-              <p className="text-gray-600">Order ID: NH-2047183</p>
+              <h1 className="text-2xl font-bold">THANK YOU Suraj M.</h1>
+              <p className="text-gray-600">Order ID: VC-451633</p>
             </div>
             {/* Order Details Section */}
             <div className="mb-6 border rounded-lg overflow-hidden">
@@ -25,15 +25,15 @@ export default function OrderPage() {
                   <div className="font-semibold text-sm mb-1">
                     ORDER NUMBER:
                   </div>
-                  <div>NH-2047183</div>
+                  <div>VC-451633</div>
                 </div>
                 <div className="w-full sm:w-1/2 md:w-1/4 p-4 border-b md:border-b-0 md:border-r">
                   <div className="font-semibold text-sm mb-1">DATE:</div>
-                  <div>May 3, 2024</div>
+                  <div>AUG 3, 2024</div>
                 </div>
                 <div className="w-full sm:w-1/2 md:w-1/4 p-4 sm:border-r">
                   <div className="font-semibold text-sm mb-1">EMAIL:</div>
-                  <div className="truncate">sreeram.mv@email.com</div>
+                  <div className="truncate">surajm_89@email.com</div>
                 </div>
                 <div className="w-full sm:w-1/2 md:w-1/4 p-4">
                   <div className="font-semibold text-sm mb-1">TOTAL:</div>
@@ -65,19 +65,19 @@ export default function OrderPage() {
 
                 <div className="bg-gray-100 p-4 rounded-lg mb-4">
                   <div className="flex justify-between mb-2">
-                    <span className="font-medium">Sreeram Mv</span>
-                    <span className="text-gray-600">7780407705</span>
+                    <span className="font-medium">Suraj M.v</span>
+                    <span className="text-gray-600">0123456789</span>
                   </div>
                   <p className="text-sm text-gray-600">
-                    D.NO 85-27-2/2, PLOT NO 157, RTC COLONY,
+                    450 Muldoon Rd, Anchorage
                     <br />
-                    OPP. BEST PRICE, RAJAMAHENDRAVARAM,
+                    Alabama,
                     <br />
-                    EAST GODAVARI DISTRICT,
+                    ZipCode: 99504,
                     <br />
-                    ANDHRAPRADESH , NEAR JN ROAD
+                    United States.
                     <br />
-                    Godavari, Andhra Pradesh - 533106
+                    Addison.
                   </p>
                 </div>
 
@@ -87,18 +87,16 @@ export default function OrderPage() {
                     <span className="font-medium">₹ 334</span>
                   </div>
                   <div className="flex items-center">
-                    <Image
-                      src="/placeholder.svg"
+                    <img
+                      src="https://placehold.co/100x100"
                       alt="Product Image"
-                      width={60}
-                      height={60}
-                      className="mr-4"
+                      className="mr-4 w-[60px] h-[60px]"
                     />
                     <div>
                       <h3 className="font-medium">
-                        Hibiscus Amla Summer Hair Oil
+                        High-End Fragrance Collection for Males
                       </h3>
-                      <p className="text-sm text-gray-600">100ml • Qty 1</p>
+                      <p className="text-sm text-gray-600">300ml • Qty 1</p>
                       <div className="flex items-center mt-1">
                         <span className="font-medium mr-2">₹334</span>
                         <span className="text-sm text-gray-500 line-through mr-2">

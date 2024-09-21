@@ -53,9 +53,9 @@ const ProductPage = () => {
           </div>
           <div className="w-full lg:w-1/2 space-y-4">
             <h1 className="text-2xl lg:subHeading">
-              Luxury Perfume Gift Set For Men - 4 x 20ml
+              High-End Fragrance Collection for Males
             </h1>
-            <p className="text-xs lg:text-sm text-gray-500">EAU DE PARFUM</p>
+            <p className="text-xs lg:text-sm text-gray-500">MEN</p>
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
@@ -69,39 +69,46 @@ const ProductPage = () => {
                   />
                 ))}
               </div>
-              <span className="text-sm font-medium">4.7</span>
+              <span className="text-sm font-medium">4.4</span>
               <span className="text-sm text-gray-500">(1221 Reviews)</span>
             </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-2xl lg:text-3xl font-bold">₹525.00</span>
-              <span className="text-lg text-gray-500 line-through">
-                ₹860.00
-              </span>
-              <span className="text-red-500 font-semibold">-39%</span>
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-4">
+              <div className="mb-4 lg:mb-0">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl lg:text-3xl font-bold">
+                    ₹525.00
+                  </span>
+                  <span className="text-lg text-gray-500 line-through">
+                    ₹860.00
+                  </span>
+                  <span className="text-red-500 font-semibold">-39%</span>
+                </div>
+                <p className="text-sm text-gray-500">Inclusive of all taxes</p>
+              </div>
+              <div className="flex items-center gap-0">
+                <Button variant="outline" className="bg-[#F2F2F2]" size="icon">
+                  <Minus className="h-4 w-4" />
+                </Button>
+                <span className="w-12 text-center border-y-2 py-[6px]">1</span>
+                <Button variant="outline" className="bg-[#F2F2F2]" size="icon">
+                  <Plus className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
-            <p className="text-sm text-gray-500">Inclusive of all taxes</p>
-            <div className="flex items-center gap-2">
-              <Button variant="outline" size="icon">
-                <Minus className="h-4 w-4" />
-              </Button>
-              <span className="w-12 text-center">1</span>
-              <Button variant="outline" size="icon">
-                <Plus className="h-4 w-4" />
-              </Button>
-            </div>
-            <Button className="w-full bg-black text-white hover:bg-gray-800 ">
+
+            <Button className="w-full bg-black text-white hover:bg-gray-800 py-[30px]">
               ADD TO CART
             </Button>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
               {[
-                { icon: Clock, text: "LONG LASTING" },
-                { icon: Award, text: "IFRA - CERTIFIED" },
-                { icon: Droplet, text: "IMPORTED OILS" },
-                { icon: MapPin, text: "MAKE IN INDIA" },
+                { icon: Clock, text: "LONG-LASTING" },
+                { icon: Award, text: "CERTIFIED" },
+                { icon: Droplet, text: "QUALITY CHECKED OILS" },
+                { icon: MapPin, text: "MADE IN INDIA" },
               ].map(({ icon: Icon, text }, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center text-center bg-gray-100 p-3 justify-center"
+                  className="flex flex-col items-center text-center bg-gray-100 px-1 py-8 justify-center"
                 >
                   <div className="rounded-full">
                     <Icon className="w-6 h-6" />

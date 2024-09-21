@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SearchIcon } from "lucide-react";
+import { Loader, Loader2, SearchIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -100,6 +100,7 @@ export default function OrderTracker() {
             </p>
           </div>
           <Button type="submit" className="w-full" disabled={isLoading}>
+            {isLoading && <Loader className="mr-2 h-4 w-4 animate-spin" />}{" "}
             {isLoading ? "Searching..." : "Track Order"}
           </Button>
         </form>

@@ -34,17 +34,17 @@ type OrderItem = {
 
 const orderItems: OrderItem[] = [
   {
-    name: "HIGHLANDER",
-    size: "M",
+    name: "High-End Fragrance Collection for Males",
+    size: "300ml",
     quantity: 1,
-    price: 2400.0,
+    price: 999.0,
     image: "https://placehold.co/80x80",
   },
   {
-    name: "Moda Rapido",
-    size: "XXXL",
+    name: "High-End Fragrance Collection for Males",
+    size: "200ml",
     quantity: 1,
-    price: 3200.0,
+    price: 799.0,
     image: "https://placehold.co/80x80",
   },
 ];

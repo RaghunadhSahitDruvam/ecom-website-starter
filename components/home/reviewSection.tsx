@@ -8,27 +8,27 @@ import { CiInstagram } from "react-icons/ci";
 const reviews = [
   {
     id: 1,
-    name: "Sanna Thakur",
-    instagram: "sannathakur_",
+    name: "Milinda Thakur",
+    instagram: "milli_thanur_123",
     image: "https://placehold.co/200x200",
     rating: 5,
-    text: "VIBECART has raised the bar for the perfume industry, Such good quality at very affordable price",
+    text: "VIBECART has set a new standard in the fragrance market, offering exceptional quality at remarkably affordable prices.",
   },
   {
     id: 2,
-    name: "Rahul Mehta",
-    instagram: "rahul_mehta92",
+    name: "Shubhman Ravi",
+    instagram: "shubhman_92_ravi",
     image: "https://placehold.co/200x200",
     rating: 5,
-    text: "Impressed by the longevity of these fragrances. VIBECART offers luxury scents at unbeatable prices.",
+    text: "Amazed by the lasting power of these scents. VIBECART provides high-end fragrances at unmatched prices.",
   },
   {
     id: 3,
-    name: "Priya Sharma",
-    instagram: "priya.sharma",
+    name: "Raghav varma",
+    instagram: "raghav.varma_89",
     image: "https://placehold.co/200x200",
     rating: 5,
-    text: "Found my signature scent with VIBECART. The attention to detail in their perfumes is remarkable.",
+    text: "Discovered my signature fragrance with VIBECART. The meticulous craftsmanship in their perfumes is truly impressive.",
   },
 ];
 

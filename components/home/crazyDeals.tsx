@@ -15,7 +15,7 @@ const CrazyDealsComponent = () => {
               className="w-full h-auto object-cover"
             />
             <p className="text-center uppercase textGa font-[500]">
-              Daily Essential Kit
+              Personal Care Bundle
             </p>
           </div>
           <div className="flex-shrink-0 w-[80vw] sm:w-[347px]">
@@ -25,7 +25,7 @@ const CrazyDealsComponent = () => {
               className="w-full h-auto object-cover"
             />
             <p className="text-center uppercase textGa font-[500]">
-              Daily Essential Kit
+              Essential Cosmetics
             </p>
           </div>
           <div className="flex-shrink-0 w-[80vw] sm:w-[347px]">
@@ -35,7 +35,7 @@ const CrazyDealsComponent = () => {
               className="w-full h-auto object-cover"
             />
             <p className="text-center uppercase textGa font-[500]">
-              Daily Essential Kit
+              Magical Set
             </p>
           </div>
         </div>

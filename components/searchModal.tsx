@@ -15,28 +15,28 @@ const SearchModal = ({ open, setOpen }: { open: boolean; setOpen: any }) => {
   ];
   const recommendedProducts = [
     {
-      name: "CEO Man Intense",
+      name: "Intense Men Perfume",
       price: 849,
       originalPrice: 1099,
       discount: 23,
       image: "https://placehold.co/100x200",
     },
     {
-      name: "OCEAN Man",
+      name: "Intense Men Perfume",
       price: 849,
       originalPrice: 1099,
       discount: 23,
       image: "https://placehold.co/100x200",
     },
     {
-      name: "Luxury Perfume",
+      name: "Intense Men Perfume",
       price: 349,
       originalPrice: 399,
       discount: 13,
       image: "https://placehold.co/100x200",
     },
     {
-      name: "DARK OUD - 100ml",
+      name: "Intense Men Perfume",
       price: 849,
       originalPrice: 1099,
       discount: 23,
@@ -73,7 +73,7 @@ const SearchModal = ({ open, setOpen }: { open: boolean; setOpen: any }) => {
 
           <div>
             <h3 className="text-sm font-semibold mb-2">Recommended For You</h3>
-            <div className="flex space-x-4 overflow-x-auto pb-2 sm:grid sm:grid-cols-4 sm:space-x-0 sm:gap-4">
+            <div className="flex space-x-2 overflow-x-auto pb-2 sm:grid sm:grid-cols-4 sm:space-x-0 sm:gap-2">
               {recommendedProducts.map((product) => (
                 <div
                   key={product.name}
@@ -83,7 +83,7 @@ const SearchModal = ({ open, setOpen }: { open: boolean; setOpen: any }) => {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="absolute inset-0 w-[110px] h-full object-cover rounded-none"
+                      className="absolute inset-0 w-[200px] h-full object-cover rounded-none"
                     />
                     <span className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
                       {product.discount}% OFF

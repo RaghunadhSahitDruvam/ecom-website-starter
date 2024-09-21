@@ -19,8 +19,8 @@ interface Product {
 const products: Product[] = [
   {
     id: "1",
-    name: "Luxury Perfume Gift Set For Men",
-    category: "EAU DE PARFUM",
+    name: "High-End Fragrance Collection for Males",
+    category: "MEN",
     image: "https://placehold.co/252x316",
     rating: 4.7,
     reviews: 1221,
@@ -31,8 +31,8 @@ const products: Product[] = [
   },
   {
     id: "2",
-    name: "CEO Man Luxury Perfume - 100ml",
-    category: "EAU DE PERFUME",
+    name: "Chief Gentleman Deluxe Fragrance - 100ml.",
+    category: "MEN",
     image: "https://placehold.co/252x316",
     rating: 4.8,
     reviews: 736,
@@ -43,8 +43,8 @@ const products: Product[] = [
   },
   {
     id: "3",
-    name: "Kiss-Proof Liquid Lipstick",
-    category: "LONG WEAR MATTE LIQUID LIPSTICK",
+    name: "Smudge-Proof Fluid Lip Color",
+    category: "WOMEN",
     image: "https://placehold.co/252x316",
     rating: 4.8,
     reviews: 187,
@@ -55,8 +55,8 @@ const products: Product[] = [
   },
   {
     id: "4",
-    name: "Luxury Perfume Gift Set For Women",
-    category: "EAU DE PARFUM",
+    name: "Premium Scent Gift Bundle for Females",
+    category: "WOMEN",
     image: "https://placehold.co/252x316",
     rating: 4.9,
     reviews: 732,
