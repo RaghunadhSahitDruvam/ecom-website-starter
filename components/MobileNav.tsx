@@ -16,12 +16,15 @@ export default function MobileNavComponent() {
   });
   const handleOnClickHamurgerMenu = () => {
     setHamMenuOpen(true);
+    console.log(hamMenuOpen);
   };
   const handleOnClickCartMenu = () => {
     setCartMenuOpen(true);
+    console.log(cartMenuOpen);
   };
   const handleOnClickAccountMenu = () => {
     setAccountMenuOpen(true);
+    console.log(accountMenuOpen);
   };
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 md:hidden">
