@@ -38,7 +38,7 @@ export default function WhyWebsiteComponent() {
             <Image
               src={`/images/features/${index + 1}.png`}
               alt="_"
-              height={100}
+              height={150}
               width={100}
               className="sm:w-[50px] sm:h-[50px] mb-[20px]"
             />
