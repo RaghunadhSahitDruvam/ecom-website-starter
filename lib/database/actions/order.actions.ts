@@ -57,7 +57,7 @@ export async function createOrder({
       from: "mvsrcm@gmail.com",
       to: user.email,
       subject: "Order Confirmation",
-      html: render(Email({ orderData: newOrder })),
+      html: await render(Email({ orderData: newOrder })),
     };
     await transporter
       .sendMail(message)
