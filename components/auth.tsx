@@ -1,138 +1,105 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import { User } from "lucide-react";
 import { useAtom, useStore } from "jotai";
 import { accountMenuState } from "./store";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { CreditCard, Settings, LogOut } from "lucide-react";
+import { useClerk } from "@clerk/nextjs";
+import Link from "next/link";
+import { useUser } from "@clerk/clerk-react";
 
 export default function SignInUpPopup() {
+  const { isSignedIn: isLoggedIn } = useUser();
+  const { signOut } = useClerk();
+
   const [accountMenuOpen, setAccountMenuOpen] = useAtom(accountMenuState, {
     store: useStore(),
   });
+
   const handleOnClickAccountMenu = () => {
     setAccountMenuOpen(true);
     console.log("Menu opened: ", accountMenuOpen); // Debug log
   };
+
   return (
-    <Dialog open={accountMenuOpen}>
-      <DialogTrigger asChild>
+    <DropdownMenu open={accountMenuOpen} onOpenChange={setAccountMenuOpen}>
+      <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
           size="icon"
           className="lg:flex"
-          onClick={() => handleOnClickAccountMenu()}
+          onClick={handleOnClickAccountMenu}
         >
           <User size={24} />
         </Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogTitle className="heading text-center">Login/Signup</DialogTitle>
-        <Card>
-          <Tabs defaultValue="login">
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="login">Login</TabsTrigger>
-              <TabsTrigger value="signup">Sign Up</TabsTrigger>
-            </TabsList>
-            <TabsContent value="login">
-              <form>
-                <CardHeader>
-                  <CardTitle>Login</CardTitle>
-                  <CardDescription>
-                    Enter your credentials to access your account.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="email-login">Email</Label>
-                    <Input
-                      id="email-login"
-                      name="email"
-                      type="email"
-                      placeholder="m@example.com"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="password-login">Password</Label>
-                    <Input
-                      id="password-login"
-                      name="password"
-                      type="password"
-                      required
-                    />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button type="submit" className="w-full">
-                    Login
-                  </Button>
-                </CardFooter>
-              </form>
-            </TabsContent>
-            <TabsContent value="signup">
-              <form>
-                <CardHeader>
-                  <CardTitle>Sign Up</CardTitle>
-                  <CardDescription>
-                    Create a new account to get started.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="John Doe"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email-signup">Email</Label>
-                    <Input
-                      id="email-signup"
-                      name="email"
-                      type="email"
-                      placeholder="m@example.com"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="password-signup">Password</Label>
-                    <Input
-                      id="password-signup"
-                      name="password"
-                      type="password"
-                      required
-                    />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button type="submit" className="w-full">
-                    Sign Up
-                  </Button>
-                </CardFooter>
-              </form>
-            </TabsContent>
-          </Tabs>
-        </Card>
-      </DialogContent>
-    </Dialog>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          {isLoggedIn ? (
+            <>
+              {" "}
+              <DropdownMenuItem>
+                <User />
+                <span>Profile</span>
+                <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <CreditCard />
+                <span>Billing</span>
+                <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Settings />
+                <span>Settings</span>
+                <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+              </DropdownMenuItem>
+            </>
+          ) : (
+            <>
+              {" "}
+              <Link href={"/sign-up"}>
+                <DropdownMenuItem>
+                  <User />
+                  <span>Sign up</span>
+                </DropdownMenuItem>
+              </Link>
+              <Link href={"/sign-in"}>
+                <DropdownMenuItem>
+                  <User />
+                  <span>Sign in</span>
+                </DropdownMenuItem>
+              </Link>
+            </>
+          )}
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        {!isLoggedIn ? (
+          <p className="text-[12px] text-gray-400">
+            Sign up or log in to view your orders, set up billing details,
+            unlock discounts, and much more!
+          </p>
+        ) : (
+          <DropdownMenuItem
+            onClick={() => signOut({ redirectUrl: "/sign-in" })}
+          >
+            <LogOut />
+            <span>Log out</span>
+            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+          </DropdownMenuItem>
+        )}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
