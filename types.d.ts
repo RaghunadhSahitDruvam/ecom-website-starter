@@ -11,6 +11,7 @@ declare type CreateUserParams = {
   clerkId: string;
   email: string;
   image: string;
+  username: string | null;
 };
 declare type CreateTopBarParams = {
   title: string;
