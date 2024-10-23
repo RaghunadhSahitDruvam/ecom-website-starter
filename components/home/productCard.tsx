@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+
 interface Product {
   id: string;
   name: string;
@@ -14,65 +15,12 @@ interface Product {
   isBestseller?: boolean;
   isSale?: boolean;
 }
-const products: Product[] = [
-  {
-    id: "1",
-    name: "High-End Fragrance Collection for Males",
-    category: "MEN",
-    image:
-      "https://res.cloudinary.com/dtxh3ew7s/image/upload/v1727352106/1_upscaled_pku7p3.png",
-    rating: 4.7,
-    reviews: 1221,
-    price: 565.0,
-    originalPrice: 849.0,
-    discount: 34,
-    isBestseller: true,
-  },
-  {
-    id: "2",
-    name: "Chief Gentleman Deluxe Fragrance - 100ml.",
-    category: "MEN",
-    image:
-      "https://res.cloudinary.com/dtxh3ew7s/image/upload/v1727352106/3_upscaled_smnoeu.png",
-    rating: 4.8,
-    reviews: 736,
-    price: 499.0,
-    originalPrice: 899.0,
-    discount: 45,
-    isBestseller: true,
-  },
-  {
-    id: "3",
-    name: "Smudge-Proof Fluid Lip Color",
-    category: "WOMEN",
-    image:
-      "https://res.cloudinary.com/dtxh3ew7s/image/upload/v1727352106/2_upscaled_g6ibby.png",
-    rating: 4.8,
-    reviews: 187,
-    price: 329.0,
-    originalPrice: 449.0,
-    isBestseller: true,
-    isSale: true,
-  },
-  {
-    id: "4",
-    name: "Premium Scent Gift Bundle for Females",
-    category: "WOMEN",
-    image:
-      "https://res.cloudinary.com/dtxh3ew7s/image/upload/v1727352106/4_upscaled_hqhzq6.png",
-    rating: 4.9,
-    reviews: 732,
-    price: 565.0,
-    originalPrice: 849.0,
-    discount: 34,
-    isBestseller: true,
-  },
-];
+
 const Card = ({ product, shop }: { product: Product; shop?: boolean }) => {
   return (
     <div className="w-full flex-shrink-0 mb-2 group">
       <div className="relative overflow-hidden">
-        <Link href={"/product"}>
+        <Link href={`/product/${product.id}`}>
           <img
             src={product.image}
             alt={product.name}
@@ -91,7 +39,7 @@ const Card = ({ product, shop }: { product: Product; shop?: boolean }) => {
             </span>
           )}
         </div>
-        {product.discount && (
+        {typeof product?.discount !== "undefined" && product?.discount > 0 && (
           <span className="absolute bottom-2 left-2 bg-[#7EBFAE] text-white text-xs font-semibold px-2 py-1 rounded">
             {product.discount}% OFF
           </span>
@@ -121,7 +69,7 @@ const Card = ({ product, shop }: { product: Product; shop?: boolean }) => {
         </span>
       </div>
       {!shop && (
-        <Link href={"/product"}>
+        <Link href={`/product/${product.id}`}>
           <Button className="w-full bg-black text-white hover:bg-gray-800">
             VIEW PRODUCT
           </Button>
@@ -130,12 +78,13 @@ const Card = ({ product, shop }: { product: Product; shop?: boolean }) => {
     </div>
   );
 };
-
 const ProductCard = ({
   heading,
+  products, // Accept dynamic products
   shop,
 }: {
   heading: string;
+  products: Product[];
   shop?: boolean;
 }) => {
   return (

@@ -40,7 +40,7 @@ export async function getTopSellingProducts() {
     await connectToDatabase();
     const products: any = await Product.find()
       .sort({ "subProducts.sold": -1 })
-      .limit(5)
+      .limit(4)
       .lean();
     if (!products) {
       throw new Error("Products are not yet created!");
