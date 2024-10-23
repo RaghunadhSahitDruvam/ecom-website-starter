@@ -45,8 +45,8 @@ const ShopPage = () => {
       </div>
 
       {/* Display product cards - passing 'shop' prop to adjust the layout for the shop page */}
-      <ProductCard heading="" shop={true} />
-      <ProductCard heading="" shop={true} />
+      {/* <ProductCard heading="" shop={true} />
+      <ProductCard heading="" shop={true} /> */}
     </div>
   );
 };

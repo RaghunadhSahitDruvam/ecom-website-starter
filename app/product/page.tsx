@@ -121,7 +121,7 @@ const ProductPage = () => {
         </div>
         <Accordian />
         <ReviewComponent />
-        <ProductCard heading={"YOU MAY ALSO LIKE"} />
+        {/* <ProductCard heading={"YOU MAY ALSO LIKE"} /> */}
       </div>
     </>
   );
