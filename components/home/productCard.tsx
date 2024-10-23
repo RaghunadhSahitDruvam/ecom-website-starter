@@ -70,13 +70,13 @@ const products: Product[] = [
 ];
 const Card = ({ product, shop }: { product: Product; shop?: boolean }) => {
   return (
-    <div className="w-full flex-shrink-0 mb-2">
-      <div className="relative">
+    <div className="w-full flex-shrink-0 mb-2 group">
+      <div className="relative overflow-hidden">
         <Link href={"/product"}>
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-auto object-cover mb-4"
+            className="w-full h-auto object-cover mb-4 transition-transform duration-700 ease-in-out transform group-hover:scale-110"
           />
         </Link>
         <div className="absolute top-2 left-2 flex gap-2">

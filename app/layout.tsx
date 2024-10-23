@@ -12,6 +12,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import TopBarComponent from "@/components/topBarComponent";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <MantineProvider>
+            <TopBarComponent />
             <Navbar />
             {children}
             <MobileNavComponent />

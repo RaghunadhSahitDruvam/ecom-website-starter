@@ -14,7 +14,7 @@ export const fetchAllWebsiteBanners = async () => {
       max_results: 100, // Adjust this as needed
     });
 
-    return result.resources;
+    return result.resources.map((i, index) => i.url);
   } catch (error: any) {
     console.log("Error fetching app banners:", error);
   }
@@ -28,7 +28,7 @@ export const fetchAllAppBanners = async () => {
       max_results: 100, // Adjust this as needed
     });
 
-    return result.resources;
+    return result.resources.map((i, index) => i.url);
   } catch (error: any) {
     console.log("Error fetching app banners:", error);
   }

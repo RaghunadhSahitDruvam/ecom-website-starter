@@ -1,14 +1,6 @@
 import React from "react";
 
-const categories = [
-  { name: "COSMETICS", image: "https://placehold.co/300x300" },
-  { name: "SKINCARE", image: "https://placehold.co/300x300" },
-  { name: "LUXURY PERFUMES", image: "https://placehold.co/300x300" },
-  { name: "BATH & BODY", image: "https://placehold.co/300x300" },
-  { name: "Skin Deodorants", image: "https://placehold.co/300x300" },
-  { name: "GIFT SETS", image: "https://placehold.co/300x300" },
-];
-const CategorySection = () => {
+const CategorySection = ({ subCategories }: { subCategories: any[] }) => {
   return (
     <div>
       <div className="container mx-auto px-4 mb-[20px]">
@@ -16,11 +8,11 @@ const CategorySection = () => {
           LUXURY CATEGORIES
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {categories.map((category, index) => (
+          {subCategories.map((category, index) => (
             <div key={index} className="flex flex-col items-center">
               <div className="bg-gray-100">
                 <img
-                  src={category.image}
+                  src={category.images[0].url} // Assuming images is an array and taking the first one
                   alt={category.name}
                   width={300}
                   height={300}
